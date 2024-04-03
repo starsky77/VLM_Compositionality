@@ -86,7 +86,8 @@ def get_model(model_name, device, root_dir=CACHE_DIR):
         import open_clip
         from .clip_models import CLIPWrapper
         variant = model_name.split(":")[1]
-        model, _, image_preprocess = open_clip.create_model_and_transforms(model_name=variant, pretrained="laion2b_s34b_b79k", device=device)
+        # model, _, image_preprocess = open_clip.create_model_and_transforms(model_name=variant, pretrained="laion2b_s34b_b79k", device=device)
+        model, _, image_preprocess = open_clip.create_model_and_transforms(model_name=variant, pretrained="openai", device=device)
         model = model.eval()
         clip_model = CLIPWrapper(model, device) 
         return clip_model, image_preprocess
