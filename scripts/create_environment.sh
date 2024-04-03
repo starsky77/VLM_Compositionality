@@ -12,3 +12,4 @@ python -m pip install tqdm
 python -m pip install pandas>=1.4.3
 python -m pip install scikit-learn>=1.2.0
 python -m pip install scipy>=1.7.3
+python -m pip install gdown
